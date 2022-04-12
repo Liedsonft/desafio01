@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(82,139,127),rgb(53,74,105))
+        }
+        
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+    
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 10px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color:white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0 px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+      
+        }
+        #submit {
+            background-image: linear-gradient(to right, rgb(82,139,127),rgb(53,74,105));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right, #247664,#35527b)
+        }
+        .logo img {
+
+            position: absolute;
+            top: 50px;
+            left: 50 px;
+            pointer-events: none;
+            
+
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="css" id="css">
+    </div>
+    <div class="logo">
+         <img src="logo.png"> 
+    </div>
+    <div class="box">
+        <form action="">
+            <fieldset> 
+                <legend><b>Cadastro de funcionários</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email"class="labelInput" >Email:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone"class="labelInput" >CPF:</label>
+                </div>
+                <br>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino" >Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino" >Masculino</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro" >Outro</label>
+                <br><br>
+                <input type="submit" name="submit" id="submit"> 
+
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+<script>
+</script>
+</html>
